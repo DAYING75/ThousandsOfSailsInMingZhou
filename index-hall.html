@@ -88,9 +88,10 @@
 				transform: translate(-50%,-50%);
 			}
 			.return{
+				display: none;
 				position: absolute;
-				top: 103%;
-				left: 7%;
+				top: 95%;
+				left: 95%;
 				transform: translate(-50%,-50%);
 			}
 			.notice{
@@ -127,16 +128,12 @@
 			<div class="xitai"><img height="640px" src="./res/img-hall/taixi.png" /></div>
 			<div class="huiguan"><img height="675px" src="./res/img-hall/huiguan.png" onclick="lighttxt()"/></div>
 			
-			
 			<div class = "notice"><img height="60px" src = "./res/img-hall/not.png"/></div>
+			
+			
 		</div>	
-		<div class="card">
-			<img height="620px" src="./res/img-hall/card.png">
-			<div class="return">
-				<a href="index.html"><img height="50px" src="./res/img1/return.png"></a>
-				</div>
-			</div>
-		
+		<div class="card"><img height="620px" src="./res/img-hall/card.png"></div>
+		<div class="return"><a href="index.html"><img height="50px" src="./res/img1/return.png"></a></div>
 	</body>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 	<script type="text/javascript">
@@ -179,7 +176,8 @@
 			}
 			function xianshi(){
 				if(a===1&&b===1&&c===1){
-					document.getElementsByClassName("card")[0].style.display= "block";				
+					document.getElementsByClassName("card")[0].style.display= "block";
+					document.getElementsByClassName("return")[0].style.display= "block";
 				}
 			}
 			
