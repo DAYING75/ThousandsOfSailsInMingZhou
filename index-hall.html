@@ -21,6 +21,9 @@
 				position: relative;
 				perspective:950;
 				-webkit-perspective:950; /* Safari and Chrome */
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
 			}
 			.bg{
 				position: absolute;
@@ -77,7 +80,19 @@
 				position: absolute;
 				display: none;
 			}
-			
+			.card{
+				position: absolute;
+				display: none;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.return{
+				position: absolute;
+				top: 103%;
+				left: 7%;
+				transform: translate(-50%,-50%);
+			}
 			.notice{
 				width: 510px;
 				height: 60px;
@@ -112,22 +127,36 @@
 			<div class="xitai"><img height="640px" src="./res/img-hall/taixi.png" /></div>
 			<div class="huiguan"><img height="675px" src="./res/img-hall/huiguan.png" onclick="lighttxt()"/></div>
 			
+			
 			<div class = "notice"><img height="60px" src = "./res/img-hall/not.png"/></div>
 		</div>	
+		<div class="card">
+			<img height="620px" src="./res/img-hall/card.png">
+			<div class="return">
+				<a href="index.html"><img height="50px" src="./res/img1/return.png"></a>
+				</div>
+			</div>
 		
 	</body>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 	<script type="text/javascript">
 	/*jquery实现点击元素显示再次点击消失*/
+	var a = 0;
+	var b = 0;
+	var c = 0;
 		$(document).ready(function(){
 		  $(".fo").click(function(){
 		      $(".txt:eq(0)").toggle();
+			  a = 1;
+			  xianshi();
 		  });     
 		})
 		
 		$(document).ready(function(){
 		  $(".xitai").click(function(){
 		      $(".txt:eq(1)").toggle();
+			  b = 1;
+			  xianshi();
 		  });     
 		})
 	/*js实现方法*/	
@@ -145,7 +174,14 @@
 				else{
 					k=0;
 				}
-				
+				c = 1;
+				xianshi();
 			}
+			function xianshi(){
+				if(a===1&&b===1&&c===1){
+					document.getElementsByClassName("card")[0].style.display= "block";				
+				}
+			}
+			
 	</script>>
 </html>
