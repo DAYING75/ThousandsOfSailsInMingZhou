@@ -107,6 +107,14 @@
 				margin-top: 270px;
 			}
 			
+			.bt{
+				margin-left: 450px;
+				margin-top: 40px;
+				height: 40%;
+				width: 40%;
+
+				
+			}
 			.share {
 				position: absolute;
 				z-index: 100;
@@ -126,32 +134,44 @@
 				}
 				to {
 					transform: scale(1);
-					opacity: 0.4;
-					
+					opacity: 0.3;
 					margin-left: 120px;
-				margin-top: 40px;
+					margin-top: 40px;
 				}
 			}
 		</style>
-
-		<script>
-			window.onload = function() {
-				var x = document.getElementsByClassName("share")[0];
-				setTimeout(function() { //定时器 
-					x.style.display = "none"; //将图片的display属性设置为none
-				}, 3000); //设置三千毫秒即3秒
-			};
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".image_list img").click(function() {
+					$("#bg").css("./res/img/dili.png");
+					$("#bg1").css("display", "none");
+					$("#bg2").css("display", "none");
+					$("#bg3").css("display", "none");
+					$("#bg4").css("display", "none");
+				});
+			});
 		</script>
+		<script>
+				window.onload = function() {
+					var x = document.getElementsByClassName("share")[0];
+					setTimeout(function() { //定时器 
+						x.style.display = "none"; //将图片的display属性设置为none
+					}, 3000); //设置三千毫秒即3秒
+				};
+			</script>
+
 	</head>
 
 	<body>
 
 		<div class="banner">
-
-			<div class="layer"><img class="bg2" src="./res/img/fade1.png" /></div>
-			<div class="layer"><img class="bg2" src="./res/img/fade2.png" /></div>
-			<div class="layer"><img class="bg3" src="./res/img/fade3.png" /></div>
-			<div class="layer"><img class="bgz" src="./res/img/bg.png" /></div>
+            
+			<div id="bg1" class="layer"><img class="bg2" src="./res/img/fade1.png" /></div>
+			<div id="bg2" class="layer"><img class="bg2" src="./res/img/fade2.png" /></div>
+			<div id="bg3" class="layer"><img class="bg3" src="./res/img/fade3.png" /></div>
+			<div id="bg4" class="layer"><img class="bt" src="./res/img/tj1.png" /></div>
+			<div id="bg" class="layer"><img class="bgz" src="./res/img/bg.png" /></div>
 			<div class="layer"><img class="tj3" src="./res/img/trade.png" /></div>
 			<div class="layer"><img class="tj2" src="./res/img/wenhua.png" /></div>
 			<div class="layer"><img class="tj1" src="./res/img/dili.png" /></div>
@@ -166,6 +186,8 @@
 			<div>
 				<a href="index-hall.html" target="_blank"><img class=tj2t src="./res/img/wenhua.png" /></a>
 			</div>
+
+			
 
 	</body>
 
